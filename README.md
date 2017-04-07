@@ -1,4 +1,4 @@
-# Task_NetFix
+ Task_NetFix
 Testing task for NetFix
 
 Treaking of time:
@@ -9,4 +9,4 @@ Treaking of time:
 4. Debugging and finalization - 1.5 hours
 5. Push to GitHub - 0 hours
 
-Tottal - 5 hours
+Total - 5 hours
