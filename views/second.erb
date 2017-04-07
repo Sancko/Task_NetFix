@@ -1,0 +1,31 @@
+
+<body>
+<p>Процентная ставка: <%= @persent %>%<br />
+Сумма кредита:<%= @credit %>  
+
+<% i=1 %>
+	<table cellpadding="0" cellspacing="0" border="0" width="100%"><tr type="header-main">
+	<th type="header-main-base">номер месяца</th>
+	<th type="header-main-base">погашение кредита</th>
+	<th type="header-main-base">погашение %</th>
+	<th type="header-main-base">общий взнос</th>
+	<th type="header-main-base">остаток кредита</th>
+<% while i<=@term.to_i  %>
+	</tr><th><%= i %></td><td align="right"> <%= @my_calcu.money_for_a_month[i].round 2%> </td>
+	<td align="right"> <%= @my_calcu.payment[i].round 2%> </td>
+	<td align="right"> <%= @my_calcu.payment_all[i].round 2%> </td>
+	<td align="right"> <%= @my_calcu.credit_left[i].round 2%> </td>
+<% i+=1 %>
+<% end  %>
+
+
+<tr type="simple-header" align="right">
+<td></td>
+	<td align="rigth"><%= @sum1.round 2 %></td>
+	<td align="rigth"><%= @sum2.round 2 %> </td>
+	<td align="rigth"><%= @sum3.round 2 %> </td>
+	<td> </td>
+	</tr>
+<br><br>
+</table>
+</body>
